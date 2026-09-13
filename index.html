@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I'm Sorry, Tanu Agarwal 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background layers -->
+  <div class="bg-gradient"></div>
+  <canvas id="hearts-canvas"></canvas>
+  <div class="stars"></div>
+
+  <main class="scene" id="scene">
+
+    <!-- Stage 1: Envelope -->
+    <section class="stage stage-envelope" id="stage-envelope">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <p class="envelope-label">To: <span>Tanu Agarwal</span></p>
+          <div class="envelope-heart">💌</div>
+        </div>
+      </div>
+      <p class="hint">Click the letter to open it</p>
+    </section>
+
+    <!-- Stage 2: My Apologies -->
+    <section class="stage stage-letter hidden" id="stage-letter">
+      <div class="card">
+        <p class="eyebrow">My Apologies</p>
+        <h1 class="title">Tanu Agarwal</h1>
+        <div class="sparkle-line"></div>
+
+        <p class="typewriter" id="typewriter"></p>
+
+        <div class="reasons" id="reasons">
+          <div class="reason-card"><span class="icon">🌸</span><p>I'm sorry for hurting you.</p></div>
+          <div class="reason-card"><span class="icon">🌙</span><p>Your smile means the world to me, and I hate being the reason it fades.</p></div>
+          <div class="reason-card"><span class="icon">🕊️</span><p>Friend of yours, always and forever.</p></div>
+          <div class="reason-card"><span class="icon">💫</span><p>You deserve every bit of care — let me make it right.</p></div>
+        </div>
+
+        <button class="cta-btn" id="continue-btn">Continue →</button>
+      </div>
+    </section>
+
+    <!-- Stage 3: Our Journey -->
+    <section class="stage stage-journey hidden" id="stage-journey">
+      <div class="card">
+        <p class="eyebrow">A look back at</p>
+        <h1 class="title">Our Journey</h1>
+        <div class="sparkle-line"></div>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline-item">
+            <span class="icon">📅</span>
+            <div>
+              <h3>12th April 2025 — The day we met</h3>
+              <p>We vibed instantly. I already liked you that day, but soon after, I completely fell in love with you.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="icon">😄</span>
+            <div>
+              <h3>We laughed, we cried</h3>
+              <p>We kept going, sharing every emotion — the silly laughs and the tears, side by side.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="icon">🌧️</span>
+            <div>
+              <h3>The rough patch in the middle</h3>
+              <p>There were hard days where we saw our lowest point together — but we faced it as one.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="icon">🌱</span>
+            <div>
+              <h3>We survived and grew</h3>
+              <p>From there, we survived it together and kept growing — in our careers and in us.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="icon">💞</span>
+            <div>
+              <h3>We fought, we laughed, we grew, we stayed</h3>
+              <p>Since then, we've been there for each other — through every fight, every laugh, every step forward. Still here, still together.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="cta-btn" id="journey-continue-btn">Continue →</button>
+      </div>
+    </section>
+
+    <!-- Stage 4: Our Memories -->
+    <section class="stage stage-memories hidden" id="stage-memories">
+      <div class="card">
+        <p class="eyebrow">Little moments worth</p>
+        <h1 class="title">Our Memories</h1>
+        <div class="sparkle-line"></div>
+
+        <div class="memory-thread" id="memory-thread">
+          <div class="memory-node" style="--i:0">
+            <span class="memory-dot">🤗</span>
+            <div class="memory-photo">
+              <img src="images/1.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Our first picture, a memory forever ✨</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:1">
+            <span class="memory-dot">🙏</span>
+            <div class="memory-photo">
+              <img src="images/2.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Our first temple visit together, praying for countless moments like this. 🙏❤️</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:2">
+            <span class="memory-dot">🍴</span>
+            <div class="memory-photo">
+              <img src="images/3.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">First dinner at Nawab, where great food met even greater company. ❤️🍴</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:3">
+            <span class="memory-dot"></span>
+            <div class="memory-photo">
+              <img src="images/4_1.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">The day I posted you for the first time, and you scolded me for it. ❤️😄</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:4">
+            <span class="memory-dot"></span>
+            <div class="memory-photo">
+              <img src="images/4_2.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Our first Charminar visit together, making memories as timeless as the monument itself. ❤️</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:5">
+            <span class="memory-dot">🤗</span>
+            <div class="memory-photo">
+              <img src="images/5.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Our first outing after your toughest time, and seeing your smile again meant everything to me. ❤️</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:6">
+            <span class="memory-dot">✨</span>
+            <div class="memory-photo">
+              <img src="images/6.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Our first clubbing night together, where every song became a memory and every moment felt magical with you. ❤️</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:7">
+            <span class="memory-dot">🎂</span>
+            <div class="memory-photo">
+              <img src="images/7.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Your special day, Tanu, celebrating the beautiful soul who makes every day of my life brighter. ❤️🎂✨</p>
+            </div>
+          </div>
+          <div class="memory-node" style="--i:8">
+            <span class="memory-dot">✨</span>
+            <div class="memory-photo">
+              <img src="images/8.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Cherishing every beautiful moment we spend together. ❤️</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:10">
+            <span class="memory-dot">🥰</span>
+            <div class="memory-photo">
+              <img src="images/10.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">A picture filled with pure joy, endless smiles, and two hearts that couldn't look any cuter together. ❤️🥰</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:11">
+            <span class="memory-dot">🐾</span>
+            <div class="memory-photo">
+              <img src="images/11.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">A cute little date, adorable puppies, and memories I'll cherish forever. 🐾❤️</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:12">
+            <span class="memory-dot">✨</span>
+            <div class="memory-photo">
+              <img src="images/12.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Lost in admiration of your beauty, Tanu. ❤️✨</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:13">
+            <span class="memory-dot">🕉️</span>
+            <div class="memory-photo">
+              <img src="images/13.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">Our Mahakal visit wasn't planned, it felt like Mahadev himself called us. 🕉️❤️</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:14">
+            <span class="memory-dot">🕉️</span>
+            <div class="memory-photo">
+              <img src="images/14.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">A promise I made before Mahakal that no matter what life brings, I will never leave your side. ❤️🕉️</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:15">
+            <span class="memory-dot">🎂</span>
+            <div class="memory-photo">
+              <img src="images/15.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">My birthday trip, one of the most beautiful memories of my life, because I got to spend every precious moment with you. ❤️🎂</p>
+            </div>
+          </div>
+           <div class="memory-node" style="--i:16">
+            <span class="memory-dot">❤️</span>
+            <div class="memory-photo">
+              <img src="images/16.jpg" alt="A memory of us" loading="lazy" />
+              <p class="memory-caption">With my best friend, my greatest love, forever and always. ❤️</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="more-to-come">✨ Many more memories to come in the future... ✨</p>
+
+        <button class="cta-btn" id="memories-continue-btn">Continue →</button>
+      </div>
+    </section>
+
+    <!-- Stage 5: My Apology -->
+    <section class="stage stage-apology hidden" id="stage-apology">
+      <div class="card">
+        <p class="eyebrow">From the heart</p>
+        <h1 class="title">My Apology</h1>
+        <div class="sparkle-line"></div>
+
+        <p class="final-text" style="font-size: 1.1rem;">
+          Tanu, I am truly sorry 🥺 for the moments I hurt you. My actions do not justify what I did,
+          and I am guilty for that. 💔<br/><br/>
+          I was not doubting you, but somehow I broke your trust. 🙏 I will try my best to gain that
+          trust again, because you matter to me the most. 💗
+        </p>
+
+        <button class="cta-btn" id="apology-continue-btn">Continue →</button>
+      </div>
+    </section>
+
+    <!-- Stage 6: Forgiveness question -->
+    <section class="stage stage-question hidden" id="stage-question">
+      <div class="card center">
+        <h2 class="question-title">Will you forgive me, Tanu? 🥺</h2>
+        <p class="subtext">One small "Yes" would mean everything.</p>
+        <div class="btn-row" id="btn-row">
+          <button class="yes-btn" id="yes-btn">Yes, I forgive you 🤍</button>
+          <button class="no-btn" id="no-btn">No</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage 7: Celebration -->
+    <section class="stage stage-final hidden" id="stage-final">
+      <div class="card center">
+        <div class="big-heart">💖</div>
+        <h2 class="final-title">Thank you, Tanu!</h2>
+        <p class="final-text">You just made me the happiest person alive.<br/>I love you more than words can ever say.</p>
+        <p class="signature">— always yours 💫</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
